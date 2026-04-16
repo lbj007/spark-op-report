@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark OP - 财务规划</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">总览</a> / 财务规划</div>
+      <h2>七、财务规划</h2>
+      <p class="page-desc">成本结构、收入测算、盈亏平衡、资金需求、回本分析</p>
+    </div>
+
+    <div class="insight-banner">
+      <div class="insight-label">核心洞察</div>
+      <p>财务模型必须基于真实数据。单店全生命周期资金需求300-365万，18个月盈亏平衡，25-33个月回本。</p>
+    </div>
+
+    <!-- Key Financial KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card danger"><div class="kpi-label">总资金需求（单店）</div><div class="kpi-value">300-365<span class="kpi-unit">万</span></div><div class="kpi-sub">含亏损期补贴+安全冗余</div></div>
+      <div class="kpi-card"><div class="kpi-label">初期投入</div><div class="kpi-value">140-175<span class="kpi-unit">万</span></div><div class="kpi-sub">开业前一次性投入</div></div>
+      <div class="kpi-card orange"><div class="kpi-label">月度运营成本</div><div class="kpi-value">20-30<span class="kpi-unit">万</span></div><div class="kpi-sub">随招生季浮动</div></div>
+      <div class="kpi-card green"><div class="kpi-label">回本周期</div><div class="kpi-value">25-33<span class="kpi-unit">个月</span></div><div class="kpi-sub">参考直营校实际数据</div></div>
+    </div>
+
+    <!-- Cost Structure -->
+    <h3 class="section-title"><span class="dot"></span>8.1 成本结构</h3>
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>初期投入构成</h3></div>
+        <div class="card-body">
+          <div id="chart-init-cost" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>月度运营成本</h3></div>
+        <div class="card-body">
+          <div id="chart-monthly-cost" class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Funding Waterfall -->
+    <h3 class="section-title"><span class="dot"></span>8.3 资金需求全景图（核心修正）</h3>
+    <div class="callout callout-danger">
+      <strong>重要修正：</strong>原文暗示150万即可启动，但实际总资金需求约300-365万。如果只准备了150万就开店，大概率在第8-10个月现金流断裂。
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-waterfall" class="chart-container" style="height:380px"></div>
+      </div>
+    </div>
+
+    <!-- Revenue Projection -->
+    <h3 class="section-title"><span class="dot"></span>8.2 收入爬坡预测</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-revenue" class="chart-container" style="height:400px"></div>
+      </div>
+    </div>
+
+    <!-- Break-even -->
+    <h3 class="section-title"><span class="dot"></span>8.4 盈亏平衡分析</h3>
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>盈亏平衡点</h3></div>
+        <div class="card-body">
+          <div id="chart-breakeven" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>直营校回本数据</h3></div>
+        <div class="card-body">
+          <table class="data-table">
+            <thead><tr><th>校区</th><th>押金</th><th>回本周期</th></tr></thead>
+            <tbody>
+              <tr><td>校区A</td><td>19万</td><td>33个月</td></tr>
+              <tr><td>校区B</td><td>21万</td><td>31个月</td></tr>
+              <tr><td>校区C</td><td>18万</td><td>30个月</td></tr>
+              <tr><td>校区D</td><td>12万</td><td class="green">25个月</td></tr>
+              <tr><td>校区E</td><td>21万</td><td>28个月</td></tr>
+              <tr><td><strong>平均</strong></td><td><strong>18-21万</strong></td><td class="highlight"><strong>25-33个月</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Alerts -->
+    <h3 class="section-title"><span class="dot"></span>8.5 财务风险预警</h3>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>指标</th><th>健康值</th><th>预警线</th><th>状态</th></tr></thead>
+          <tbody>
+            <tr><td>在读人数</td><td class="green">&ge;200人</td><td class="red">&lt;150人</td><td><span class="tag tag-low">关注</span></td></tr>
+            <tr><td>续费率</td><td class="green">&ge;70%</td><td class="red">&lt;60%</td><td><span class="tag tag-low">关注</span></td></tr>
+            <tr><td>退费率</td><td class="green">&lt;8%</td><td class="red">&gt;12%</td><td><span class="tag tag-low">正常</span></td></tr>
+            <tr><td>获客成本</td><td class="green">&lt;1200元</td><td class="red">&gt;1500元</td><td><span class="tag tag-low">关注</span></td></tr>
+            <tr><td>现金流</td><td class="green">&gt;6个月支出</td><td class="red">&lt;3个月支出</td><td><span class="tag tag-high">生命线</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Expansion Model -->
+    <div class="callout callout-info">
+      <strong>财务规划核心理念：</strong>"先验证再复制，小步快跑"。用北京单店验证模型，用盈利支撑扩张。资金监管政策影响现金流，需预留充足运营资金。
+    </div>
+
+    <div class="page-nav" id="page-nav"></div>
+  </main>
+
+  <script src="js/echarts.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // Init cost pie
+    (() => {
+      const chart = initChart('chart-init-cost');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item', formatter: '{b}: {c}万 ({d}%)' },
+        series: [{
+          type: 'pie', radius: ['35%','70%'],
+          label: { formatter: '{b}\n{c}万', fontSize: 12 },
+          data: [
+            { value: 20, name: '场地押金', itemStyle: { color: BRAND.teal } },
+            { value: 12, name: '办学许可', itemStyle: { color: '#2bb8d0' } },
+            { value: 30, name: '装修费用', itemStyle: { color: BRAND.orange } },
+            { value: 14, name: '教学设备', itemStyle: { color: BRAND.gold } },
+            { value: 6, name: '教材教具', itemStyle: { color: BRAND.brown } },
+            { value: 12, name: '市场推广', itemStyle: { color: BRAND.deep } },
+            { value: 9, name: '招聘培训', itemStyle: { color: '#7c3aed' } },
+            { value: 35, name: '流动资金', itemStyle: { color: BRAND.danger } },
+            { value: 12, name: '其他', itemStyle: { color: '#a0aab4' } },
+          ]
+        }]
+      });
+    })();
+
+    // Monthly cost
+    (() => {
+      const chart = initChart('chart-monthly-cost');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item', formatter: '{b}: {c}万 ({d}%)' },
+        series: [{
+          type: 'pie', radius: ['35%','70%'],
+          label: { formatter: '{b}\n{c}万', fontSize: 12 },
+          data: [
+            { value: 6, name: '房租', itemStyle: { color: BRAND.teal } },
+            { value: 15, name: '人力成本', itemStyle: { color: BRAND.orange } },
+            { value: 3, name: '市场推广', itemStyle: { color: BRAND.gold } },
+            { value: 1.5, name: '运营管理', itemStyle: { color: BRAND.deep } },
+            { value: 0.75, name: '其他', itemStyle: { color: '#a0aab4' } },
+          ]
+        }]
+      });
+    })();
+
+    // Waterfall
+    (() => {
+      const chart = initChart('chart-waterfall');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis', formatter: (p) => p.map(i => i.seriesName !== '-' ? `${i.seriesName}: ${i.value}万` : '').filter(Boolean).join('<br>') },
+        grid: { left: 60, right: 40, top: 40, bottom: 40 },
+        xAxis: { type: 'category', data: ['初期投入','亏损期补贴\n(12-15月)','安全冗余','总计'] },
+        yAxis: { type: 'value', name: '万元' },
+        series: [
+          { name: '-', type: 'bar', stack: 'total', data: [0, 155, 265, 0], itemStyle: { color: 'transparent' }, emphasis: { itemStyle: { color: 'transparent' } } },
+          { name: '资金', type: 'bar', stack: 'total', data: [155, 110, 40, 305],
+            itemStyle: { borderRadius: [4,4,0,0] },
+            color: (p) => [BRAND.teal, BRAND.orange, BRAND.gold, BRAND.deep][p.dataIndex],
+            label: { show: true, position: 'top', formatter: '{c}万', fontWeight: 700, fontSize: 14 }
+          }
+        ]
+      });
+    })();
+
+    // Revenue ramp
+    (() => {
+      const chart = initChart('chart-revenue');
+      if(!chart) return;
+      const months = ['第1月','第3月','第6月','第9月','第12月','第15月','第18月','第21月','第24月'];
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { left: 60, right: 60, top: 40, bottom: 50 },
+        xAxis: { type: 'category', data: months },
+        yAxis: [
+          { type: 'value', name: '月收入(万元)', min: 0 },
+          { type: 'value', name: '在读人数', splitLine: { show: false } }
+        ],
+        series: [
+          { name: '月收入', type: 'bar', data: [3,5,8,12,15,17,20,22,25],
+            color: new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:BRAND.teal},{offset:1,color:BRAND.deep}]),
+            itemStyle: { borderRadius: [4,4,0,0] } },
+          { name: '月成本', type: 'line', data: [22,22,23,24,25,25,25,25,25],
+            color: BRAND.danger, lineStyle: { type: 'dashed', width: 2 } },
+          { name: '在读人数', type: 'line', yAxisIndex: 1, data: [30,55,80,120,150,165,190,200,210],
+            color: BRAND.orange, symbol: 'circle', symbolSize: 8, lineStyle: { width: 3 } },
+        ],
+        markLine: { data: [{ yAxis: 25, label: { formatter: '盈亏平衡线' } }] }
+      });
+    })();
+
+    // Break-even
+    (() => {
+      const chart = initChart('chart-breakeven');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        grid: { left: 60, right: 30, top: 40, bottom: 40 },
+        xAxis: { type: 'category', data: ['100人','150人','200人','220人','250人','280人'] },
+        yAxis: { type: 'value', name: '万元/月' },
+        series: [
+          { name: '月收入(135元)', type: 'line', data: [7,11,15,17,20,22], color: BRAND.teal, lineStyle: { width: 3 } },
+          { name: '月收入(125元)', type: 'line', data: [6.5,10,14,15.5,18,20], color: BRAND.gold, lineStyle: { width: 2, type: 'dashed' } },
+          { name: '月成本', type: 'line', data: [20,22,25,25,26,27], color: BRAND.danger, lineStyle: { width: 2, type: 'dotted' },
+            markPoint: { data: [{ coord: ['200人', 25], name: '平衡点', symbol: 'pin', symbolSize: 50,
+              itemStyle: { color: BRAND.orange }, label: { formatter: '平衡点\n~200人', color: '#fff', fontSize: 11 } }] } },
+        ],
+        legend: { bottom: 0 }
+      });
+    })();
+  </script>
+</body>
+</html>

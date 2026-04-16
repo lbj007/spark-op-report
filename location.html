@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark OP - 选址策略</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">总览</a> / 选址策略</div>
+      <h2>二、选址策略</h2>
+      <p class="page-desc">选址决定60%的成败，错误的选址无法靠运营弥补</p>
+    </div>
+
+    <div class="insight-banner">
+      <div class="insight-label">核心洞察</div>
+      <p>对线下门店来说，选址决定了60%的成败。距目标小学800米以内、家长接送动线上、合规楼层、合理租金是四大铁律。</p>
+    </div>
+
+    <!-- Core Standards -->
+    <h3 class="section-title"><span class="dot"></span>2.1 选址核心标准</h3>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>维度</th><th>标准</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td><strong>位置</strong></td><td class="highlight">距目标小学800米以内</td><td>在家长接送动线上</td></tr>
+            <tr><td><strong>楼层</strong></td><td>1-3层</td><td>合规要求；优选2层（租金性价比最优）</td></tr>
+            <tr><td><strong>面积</strong></td><td>200-350m&sup2;</td><td>4-6间教室+前台+家长等候区+办公区</td></tr>
+            <tr><td><strong>租金</strong></td><td class="highlight">&le;7.5元/m&sup2;/天</td><td>月租金控制在月营收15%以内</td></tr>
+            <tr><td><strong>周边学校</strong></td><td>半径1.5km内&ge;3所小学</td><td>在校生总数&ge;3000人</td></tr>
+            <tr><td><strong>竞品密度</strong></td><td>同商圈学而思/高思&le;2家</td><td>避免正面硬刚头部</td></tr>
+            <tr><td><strong>交通</strong></td><td>有停车位或公交/地铁便利</td><td>家长接送便利性直接影响续费</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Scoring & Exclusions -->
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>评估权重分布</h3></div>
+        <div class="card-body">
+          <div id="chart-weight" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>选址排除项</h3><span class="badge badge-red">一票否决</span></div>
+        <div class="card-body">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="callout callout-danger" style="margin:0">4层以上 — 消防合规不通过</div>
+            <div class="callout callout-danger" style="margin:0">纯住宅区底商 — 人流不足+邻居投诉</div>
+            <div class="callout callout-danger" style="margin:0">与学科培训机构同一物业 — 互相举报风险</div>
+            <div class="callout callout-danger" style="margin:0">周边1公里内无小学 — 生源不足</div>
+            <div class="callout callout-danger" style="margin:0">租金超过8元/m&sup2;/天 — 成本不可控</div>
+            <div class="callout callout-danger" style="margin:0">物业不允许教育培训 — 无法经营</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beijing Areas -->
+    <h3 class="section-title"><span class="dot"></span>2.4 北京优选区域</h3>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>优先级</th><th>区域</th><th>理由</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-high">第一梯队</span></td><td><strong>海淀</strong>（万柳/上地/五道口）</td><td>教育氛围最浓，家长付费意愿最强</td></tr>
+            <tr><td><span class="tag tag-high">第一梯队</span></td><td><strong>西城</strong>（金融街/德胜门）</td><td>优质小学密集，中产家庭集中</td></tr>
+            <tr><td><span class="tag tag-mid">第二梯队</span></td><td><strong>朝阳</strong>（望京/朝阳公园）</td><td>新兴中产聚集区，竞争相对缓和</td></tr>
+            <tr><td><span class="tag tag-mid">第二梯队</span></td><td><strong>丰台</strong>（总部基地/科技园）</td><td>新小区多，生源增长快，租金性价比高</td></tr>
+            <tr><td><span class="tag tag-low">第三梯队</span></td><td><strong>昌平</strong>（回龙观/天通苑）</td><td>人口密度大但客单价敏感，适合Y2验证</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Floor Plan -->
+    <h3 class="section-title"><span class="dot"></span>2.5 校区空间规划（250m&sup2;标准）</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-floor" class="chart-container" style="height:300px"></div>
+        <div class="callout callout-info" style="margin-top:16px">
+          <strong>空间设计原则：</strong>家长等候区必须能看到教室（玻璃隔断）；每间教室配白板+投影+空调，面积&ge;25m&sup2;；前台做品牌形象展示；消防通道不少于2个。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-nav" id="page-nav"></div>
+  </main>
+
+  <script src="js/echarts.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // Weight pie
+    (() => {
+      const chart = initChart('chart-weight');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item', formatter: '{b}: {c}%' },
+        series: [{
+          type: 'pie', radius: ['35%','70%'], center: ['50%','50%'],
+          label: { formatter: '{b}\n{c}%', fontSize: 12 },
+          data: [
+            { value: 25, name: '小学距离', itemStyle: { color: BRAND.teal } },
+            { value: 20, name: '租金水平', itemStyle: { color: BRAND.orange } },
+            { value: 15, name: '交通便利', itemStyle: { color: BRAND.gold } },
+            { value: 15, name: '楼层面积', itemStyle: { color: BRAND.deep } },
+            { value: 10, name: '竞品密度', itemStyle: { color: BRAND.success } },
+            { value: 10, name: '周边生源', itemStyle: { color: BRAND.brown } },
+            { value: 5, name: '物业条件', itemStyle: { color: '#7c3aed' } },
+          ]
+        }]
+      });
+    })();
+
+    // Floor plan treemap
+    (() => {
+      const chart = initChart('chart-floor');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { formatter: '{b}: {c}m²' },
+        series: [{
+          type: 'treemap',
+          data: [
+            { name: '教室A\n30m²', value: 30, itemStyle: { color: BRAND.teal } },
+            { name: '教室B\n30m²', value: 30, itemStyle: { color: '#2bb8d0' } },
+            { name: '教室C\n30m²', value: 30, itemStyle: { color: '#3ec7de' } },
+            { name: '教室D\n30m²', value: 30, itemStyle: { color: '#50d6ec' } },
+            { name: '教室E\n25m²', value: 25, itemStyle: { color: '#62e5fa' } },
+            { name: '家长等候区\n25m²', value: 25, itemStyle: { color: BRAND.gold } },
+            { name: '多功能区\n20m²', value: 20, itemStyle: { color: BRAND.orange } },
+            { name: '办公区\n20m²', value: 20, itemStyle: { color: BRAND.deep } },
+            { name: '前台\n15m²', value: 15, itemStyle: { color: BRAND.brown } },
+            { name: '储物间\n10m²', value: 10, itemStyle: { color: '#a0aab4' } },
+            { name: '卫生间\n15m²', value: 15, itemStyle: { color: '#c0cad4' } },
+          ],
+          label: { fontSize: 13, fontWeight: 600, color: '#fff' },
+          breadcrumb: { show: false },
+          roam: false,
+        }]
+      });
+    })();
+  </script>
+</body>
+</html>

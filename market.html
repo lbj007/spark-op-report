@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark OP - 市场调研</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">总览</a> / 市场调研</div>
+      <h2>一、外部调研</h2>
+      <p class="page-desc">行业趋势、竞争格局、消费者画像、监管环境</p>
+    </div>
+
+    <div class="insight-banner">
+      <div class="insight-label">核心洞察</div>
+      <p>少儿数学思维赛道正经历"供给侧改革"——传统学科机构退出、素养机构跑马圈地，窗口期就在今明两年。</p>
+    </div>
+
+    <!-- Market Size -->
+    <h3 class="section-title"><span class="dot"></span>1.1 市场规模与趋势</h3>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="kpi-label">非学科培训市场</div><div class="kpi-value">4636<span class="kpi-unit">亿元</span></div><div class="kpi-sub">2025年预估</div></div>
+      <div class="kpi-card orange"><div class="kpi-label">思维品类市场</div><div class="kpi-value">1140<span class="kpi-unit">亿元</span></div><div class="kpi-sub">CAGR 25%</div></div>
+      <div class="kpi-card gold"><div class="kpi-label">线下非学科机构</div><div class="kpi-value">8.4<span class="kpi-unit">万个</span></div><div class="kpi-sub">K9阶段</div></div>
+      <div class="kpi-card green"><div class="kpi-label">教育消费增速</div><div class="kpi-value">17.6<span class="kpi-unit">%</span></div><div class="kpi-sub">2023年人均增长，各品类第一</div></div>
+    </div>
+
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>市场格局变化</h3></div>
+        <div class="card-body">
+          <div id="chart-market" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>家长消费趋势</h3></div>
+        <div class="card-body">
+          <div id="chart-consumer" class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <strong>关键洞察：</strong>家长消费更理性了，但为"确定性效果"付费的意愿更强——这正是"校内提分"定位的机会点。
+    </div>
+
+    <!-- Competitor Analysis -->
+    <h3 class="section-title"><span class="dot"></span>1.2 竞品深度调研</h3>
+    <div class="vs-grid">
+      <div class="vs-card">
+        <div class="vs-name">学而思素养</div>
+        <div class="vs-item">定位：<strong>中高端培优</strong></div>
+        <div class="vs-item">班型：<strong>15-20人</strong></div>
+        <div class="vs-item">定价：<strong>150元/课时</strong></div>
+        <div class="vs-item">校内关联：<strong>弱</strong></div>
+        <div class="vs-item">竞赛出口：<strong>较弱</strong></div>
+      </div>
+      <div class="vs-card">
+        <div class="vs-name">新东方素养</div>
+        <div class="vs-item">定位：<strong>中高端优质</strong></div>
+        <div class="vs-item">班型：<strong>15-20人</strong></div>
+        <div class="vs-item">定价：<strong>145元/课时</strong></div>
+        <div class="vs-item">校内关联：<strong>弱</strong></div>
+        <div class="vs-item">竞赛出口：<strong>弱</strong></div>
+      </div>
+      <div class="vs-card">
+        <div class="vs-name">高思数学</div>
+        <div class="vs-item">定位：<strong>竞赛精英</strong></div>
+        <div class="vs-item">班型：<strong>12-15人</strong></div>
+        <div class="vs-item">定价：<strong>120元/课时</strong></div>
+        <div class="vs-item">校内关联：<strong>弱</strong></div>
+        <div class="vs-item">竞赛出口：<strong>强</strong></div>
+      </div>
+      <div class="vs-card ours">
+        <div class="vs-name">Spark思派克素养</div>
+        <div class="vs-item">定位：<strong>三层全覆盖</strong></div>
+        <div class="vs-item">班型：<strong>6-12人</strong></div>
+        <div class="vs-item">定价：<strong>135元/课时</strong></div>
+        <div class="vs-item">校内关联：<strong>强</strong></div>
+        <div class="vs-item">竞赛出口：<strong>强</strong></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <div class="card-header"><h3>竞品能力雷达对比</h3></div>
+      <div class="card-body">
+        <div id="chart-radar" class="chart-container" style="height:400px"></div>
+      </div>
+    </div>
+
+    <!-- Consumer Profile -->
+    <h3 class="section-title"><span class="dot"></span>1.3 消费者画像</h3>
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>决策影响因素</h3></div>
+        <div class="card-body">
+          <div id="chart-decision" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>目标客群特征</h3></div>
+        <div class="card-body">
+          <table class="data-table">
+            <thead><tr><th>维度</th><th>特征</th><th>运营启示</th></tr></thead>
+            <tbody>
+              <tr><td>学员年龄</td><td>6-12岁 (小学1-6年级)</td><td>决策周期短，见效快</td></tr>
+              <tr><td>家长年龄</td><td>30-39岁</td><td>中产主力，信息敏感</td></tr>
+              <tr><td>决策人</td><td>妈妈&ge;70%</td><td>沟通触点：妈妈优先</td></tr>
+              <tr><td>收入</td><td>中高收入</td><td>愿意为品质付费</td></tr>
+              <tr><td>学历</td><td>本科及以上</td><td>重视理念和数据</td></tr>
+              <tr><td>核心关注</td><td>成绩+升学</td><td>痛点：校内+择校焦虑</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opportunity -->
+    <h3 class="section-title"><span class="dot"></span>1.5 结论与机会</h3>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>维度</th><th>关键结论</th><th>优先级</th></tr></thead>
+          <tbody>
+            <tr><td>渠道</td><td>小红书+转介绍是获客核心双引擎</td><td><span class="tag tag-high">最高</span></td></tr>
+            <tr><td>成本</td><td>综合获客成本 &le;1200元/人</td><td><span class="tag tag-high">最高</span></td></tr>
+            <tr><td>转化</td><td>30分钟响应是转化关键</td><td><span class="tag tag-mid">高</span></td></tr>
+            <tr><td>留存</td><td>续费率75%，转介绍35%+</td><td><span class="tag tag-high">最高</span></td></tr>
+            <tr><td>节奏</td><td>筹备90天 &rarr; 开业30天 &rarr; 验证18个月</td><td><span class="tag tag-mid">高</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="page-nav" id="page-nav"></div>
+  </main>
+
+  <script src="js/echarts.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // Market structure
+    (() => {
+      const chart = initChart('chart-market');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item' },
+        legend: { bottom: 0 },
+        series: [{
+          type: 'pie', radius: ['40%','70%'], center: ['50%','45%'],
+          label: { formatter: '{b}\n{d}%', fontSize: 12 },
+          data: [
+            { value: 1140, name: '数学思维', itemStyle: { color: BRAND.teal } },
+            { value: 1200, name: '人文美育', itemStyle: { color: BRAND.gold } },
+            { value: 1100, name: '科学编程', itemStyle: { color: BRAND.orange } },
+            { value: 1196, name: '语言表达', itemStyle: { color: BRAND.deep } },
+          ]
+        }]
+      });
+    })();
+
+    // Consumer trends
+    (() => {
+      const chart = initChart('chart-consumer');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        grid: { left: 50, right: 20, top: 40, bottom: 40 },
+        xAxis: { type: 'category', data: ['2020','2021','2022','2023','2024','2025E'] },
+        yAxis: { type: 'value', name: '人均教育消费(元)' },
+        series: [{
+          type: 'line', data: [2032, 2215, 2469, 2904, 3100, 3400], smooth: true,
+          areaStyle: { color: new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(24,169,196,0.3)'},{offset:1,color:'rgba(24,169,196,0.02)'}]) },
+          lineStyle: { width: 3, color: BRAND.teal }, symbol: 'circle', symbolSize: 8,
+          markPoint: { data: [{ type: 'max', name: '最高' }], symbolSize: 50 }
+        }]
+      });
+    })();
+
+    // Competitor Radar
+    (() => {
+      const chart = initChart('chart-radar');
+      if(!chart) return;
+      chart.setOption({
+        legend: { bottom: 0, data: ['学而思素养','高思数学','Spark思派克素养'] },
+        radar: {
+          indicator: [
+            { name: '品牌力', max: 100 },
+            { name: '教研深度', max: 100 },
+            { name: '班型精度', max: 100 },
+            { name: '校内关联', max: 100 },
+            { name: '竞赛出口', max: 100 },
+            { name: '服务体验', max: 100 },
+            { name: '性价比', max: 100 },
+          ],
+          shape: 'polygon', radius: '65%',
+          axisName: { color: BRAND.deep, fontSize: 13 }
+        },
+        series: [{
+          type: 'radar',
+          data: [
+            { value: [95, 85, 40, 30, 50, 55, 50], name: '学而思素养', lineStyle: { color: '#7c3aed' }, areaStyle: { color: 'rgba(124,58,237,0.1)' } },
+            { value: [60, 80, 60, 25, 90, 50, 65], name: '高思数学', lineStyle: { color: BRAND.gold }, areaStyle: { color: 'rgba(255,199,87,0.1)' } },
+            { value: [70, 85, 90, 90, 80, 90, 75], name: 'Spark思派克素养', lineStyle: { color: BRAND.teal, width: 3 }, areaStyle: { color: 'rgba(24,169,196,0.15)' } },
+          ]
+        }]
+      });
+    })();
+
+    // Decision factors
+    (() => {
+      const chart = initChart('chart-decision');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item' },
+        series: [{
+          type: 'pie', radius: ['0%','70%'], center: ['50%','50%'],
+          roseType: 'area',
+          label: { formatter: '{b}\n{c}%', fontSize: 13 },
+          data: [
+            { value: 40, name: '产品效果', itemStyle: { color: BRAND.teal } },
+            { value: 25, name: '位置便利', itemStyle: { color: BRAND.orange } },
+            { value: 20, name: '服务体验', itemStyle: { color: BRAND.gold } },
+            { value: 15, name: '价格敏感', itemStyle: { color: BRAND.deep } },
+          ]
+        }]
+      });
+    })();
+  </script>
+</body>
+</html>

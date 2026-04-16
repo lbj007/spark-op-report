@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark OP - 校区运营</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">总览</a> / 校区运营</div>
+      <h2>六、校区运营管理</h2>
+      <p class="page-desc">获客渠道、销售转化、续费体系、数据看板</p>
+    </div>
+
+    <div class="insight-banner">
+      <div class="insight-label">核心洞察</div>
+      <p>运营的核心是"把合适的产品，在合适的时间，通过合适的人，卖给合适的家长"。30分钟响应是转化关键，试听课=正式课体验。</p>
+    </div>
+
+    <!-- Customer Journey -->
+    <h3 class="section-title"><span class="dot"></span>7.1 客户体验链路</h3>
+    <div class="card">
+      <div class="card-body">
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-title">品牌触达</div><div class="step-desc">广告/推荐</div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-title">品牌认知</div><div class="step-desc">内容种草</div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-title">品牌比对</div><div class="step-desc">对比3家</div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-title">上门体验</div><div class="step-desc">首次到店</div></div>
+          <div class="process-step"><div class="step-num">5</div><div class="step-title">试听转化</div><div class="step-desc">咨询师跟进</div></div>
+          <div class="process-step"><div class="step-num">6</div><div class="step-title">签约缴费</div><div class="step-desc">成交</div></div>
+          <div class="process-step"><div class="step-num">7</div><div class="step-title">推荐裂变</div><div class="step-desc">老带新</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channels -->
+    <h3 class="section-title"><span class="dot"></span>7.1 获客渠道ROI对比</h3>
+    <div class="chart-row">
+      <div class="card">
+        <div class="card-header"><h3>获客成本对比（元/人）</h3></div>
+        <div class="card-body">
+          <div id="chart-cac" class="chart-container"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>转化漏斗</h3></div>
+        <div class="card-body">
+          <div id="chart-funnel" class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel Table -->
+    <div class="card">
+      <div class="card-header"><h3>获客渠道优先级</h3></div>
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>渠道</th><th>获客成本（实际）</th><th>适用阶段</th><th>优先级</th></tr></thead>
+          <tbody>
+            <tr><td><strong>转介绍/灯塔计划</strong></td><td class="green">300-600元</td><td>核心引擎</td><td><span class="tag tag-high">第一</span></td></tr>
+            <tr><td><strong>小红书</strong></td><td>800-1500元</td><td>全阶段</td><td><span class="tag tag-high">第一</span></td></tr>
+            <tr><td>大众点评</td><td>1000-2000元</td><td>开业期</td><td><span class="tag tag-mid">第二</span></td></tr>
+            <tr><td>异业合作</td><td class="green">200-600元</td><td>全阶段</td><td><span class="tag tag-mid">第二</span></td></tr>
+            <tr><td>社群运营</td><td class="green">100-300元</td><td>存量期</td><td><span class="tag tag-mid">第二</span></td></tr>
+            <tr><td>地推</td><td>500-1200元</td><td>开业期/辅助</td><td><span class="tag tag-low">第三</span></td></tr>
+            <tr><td>抖音/快手</td><td class="red">800-2000元</td><td>品牌期</td><td><span class="tag tag-low">第三</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Conversion SOP -->
+    <h3 class="section-title"><span class="dot"></span>7.2 销售转化SOP</h3>
+    <div class="callout callout-danger">
+      <strong>30分钟内响应是转化关键！</strong>晚则流失50%的意向客户。
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>步骤</th><th>动作</th><th>时限</th><th>负责人</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-teal">线索获取</span></td><td>线索分配给咨询师</td><td class="highlight">30分钟内</td><td>销售主管</td></tr>
+            <tr><td><span class="tag tag-teal">首次触达</span></td><td>了解孩子情况、家长痛点</td><td>2小时内</td><td>咨询师</td></tr>
+            <tr><td><span class="tag tag-teal">预约上门</span></td><td>预约试听时间</td><td>3天内</td><td>咨询师</td></tr>
+            <tr><td><span class="tag tag-teal">试听课</span></td><td>45分钟完整正课体验</td><td>当天</td><td>教师</td></tr>
+            <tr><td><span class="tag tag-teal">咨询转化</span></td><td>学情分析&rarr;方案推荐&rarr;逼单</td><td>20分钟</td><td>咨询师</td></tr>
+            <tr><td><span class="tag tag-teal">签约缴费</span></td><td>确认条款、签字、缴费</td><td>当天</td><td>销售</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <h3 class="section-title"><span class="dot"></span>合规定价策略</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-price" class="chart-container" style="height:300px"></div>
+        <div class="callout callout-warning" style="margin-top:12px">受限于"不得一次性收取超过3个月费用"政策，主推<strong>季度包3240元</strong>（24课时×135元）。</div>
+      </div>
+    </div>
+
+    <!-- Renewal -->
+    <h3 class="section-title"><span class="dot"></span>7.4 续费与转介绍</h3>
+    <div class="kpi-grid" style="grid-template-columns:1fr 1fr">
+      <div class="kpi-card"><div class="kpi-label">续费率目标</div><div class="kpi-value">&ge;75<span class="kpi-unit">%</span></div></div>
+      <div class="kpi-card orange"><div class="kpi-label">转介绍目标</div><div class="kpi-value">&ge;35<span class="kpi-unit">%</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>灯塔计划（转介绍体系）</h3></div>
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>层级</th><th>条件</th><th>权益</th></tr></thead>
+          <tbody>
+            <tr><td>推荐礼</td><td>每推荐1人</td><td>双方各得2000积分</td></tr>
+            <tr><td><span class="tag tag-teal">银牌灯塔</span></td><td>年度推荐2人</td><td>推荐礼+优先活动权</td></tr>
+            <tr><td><span class="tag tag-mid">金牌灯塔</span></td><td>年度推荐3人+</td><td>推荐礼+专属权益+荣誉证书</td></tr>
+            <tr><td><span class="tag tag-high">钻石灯塔</span></td><td>年度推荐5人+</td><td>推荐礼+专属权益+年度晚宴</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Operations Dashboard -->
+    <h3 class="section-title"><span class="dot"></span>7.6 运营数据看板</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-ops" class="chart-container" style="height:380px"></div>
+      </div>
+    </div>
+
+    <div class="page-nav" id="page-nav"></div>
+  </main>
+
+  <script src="js/echarts.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // CAC comparison
+    (() => {
+      const chart = initChart('chart-cac');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        grid: { left: 100, right: 30, top: 20, bottom: 30 },
+        yAxis: { type: 'category', data: ['社群运营','异业合作','转介绍','地推','小红书','大众点评','抖音/快手'] },
+        xAxis: { type: 'value', name: '元/人' },
+        series: [{
+          type: 'bar', data: [
+            { value: 200, itemStyle: { color: BRAND.success } },
+            { value: 400, itemStyle: { color: BRAND.success } },
+            { value: 450, itemStyle: { color: BRAND.teal } },
+            { value: 850, itemStyle: { color: BRAND.gold } },
+            { value: 1150, itemStyle: { color: BRAND.orange } },
+            { value: 1500, itemStyle: { color: BRAND.danger } },
+            { value: 1400, itemStyle: { color: BRAND.danger } },
+          ],
+          barWidth: 20, itemStyle: { borderRadius: [0,4,4,0] },
+          label: { show: true, position: 'right', formatter: '{c}元', fontSize: 12 }
+        }]
+      });
+    })();
+
+    // Funnel
+    (() => {
+      const chart = initChart('chart-funnel');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'item', formatter: '{b}: {c}%' },
+        series: [{
+          type: 'funnel', left: '10%', right: '10%', top: 20, bottom: 20,
+          label: { show: true, position: 'inside', fontSize: 14, fontWeight: 600, color: '#fff' },
+          data: [
+            { value: 100, name: '曝光 100%', itemStyle: { color: BRAND.teal } },
+            { value: 30, name: '兴趣 30%', itemStyle: { color: '#2bb8d0' } },
+            { value: 15, name: '了解 15%', itemStyle: { color: BRAND.gold } },
+            { value: 10, name: '试听 10%', itemStyle: { color: BRAND.orange } },
+            { value: 8, name: '付费 8%', itemStyle: { color: BRAND.deep } },
+          ]
+        }]
+      });
+    })();
+
+    // Pricing
+    (() => {
+      const chart = initChart('chart-price');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { left: 60, right: 60, top: 30, bottom: 50 },
+        xAxis: { type: 'category', data: ['体验包\n(4课时)','月度包\n(8课时)','季度包\n(24课时)','半年包\n(48课时)'] },
+        yAxis: [
+          { type: 'value', name: '单价(元/课时)', min: 80, max: 160 },
+          { type: 'value', name: '总价(元)', splitLine: { show: false } }
+        ],
+        series: [
+          { name: '单价', type: 'bar', data: [99,150,135,125], color: BRAND.teal, barWidth: 40,
+            label: { show: true, position: 'top', formatter: '{c}元', fontWeight: 700 } },
+          { name: '总价', type: 'line', yAxisIndex: 1, data: [396,1200,3240,6000], color: BRAND.orange,
+            symbol: 'circle', symbolSize: 10, lineStyle: { width: 3 } },
+        ]
+      });
+    })();
+
+    // Ops dashboard
+    (() => {
+      const chart = initChart('chart-ops');
+      if(!chart) return;
+      chart.setOption({
+        tooltip: { trigger: 'axis' },
+        legend: { bottom: 0 },
+        grid: { left: 60, right: 60, top: 30, bottom: 50 },
+        xAxis: { type: 'category', data: ['Y1','Y2','Y3'] },
+        yAxis: [
+          { type: 'value', name: '百分比(%)', max: 100 },
+          { type: 'value', name: '元', splitLine: { show: false } }
+        ],
+        series: [
+          { name: '续费率', type: 'bar', data: [75,78,80], color: BRAND.teal },
+          { name: '转介绍占比', type: 'bar', data: [25,35,40], color: BRAND.gold },
+          { name: '满班率', type: 'bar', data: [70,80,85], color: BRAND.deep },
+          { name: '获客成本', type: 'line', yAxisIndex: 1, data: [1200,1000,800], color: BRAND.orange, symbol: 'circle', symbolSize: 10, lineStyle: { width: 3 } },
+        ]
+      });
+    })();
+  </script>
+</body>
+</html>

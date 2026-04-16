@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spark OP - 风险应对</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <div class="page-header">
+      <div class="breadcrumb"><a href="index.html">总览</a> / 风险应对</div>
+      <h2>八、风险与应对</h2>
+      <p class="page-desc">风险矩阵、应对策略、预警机制、合规体系</p>
+    </div>
+
+    <div class="insight-banner">
+      <div class="insight-label">核心警示</div>
+      <p>扩张速度超出运营能力边界，是项目失败的最大概率场景。预防优于补救——建立预警机制，保持危机意识。</p>
+    </div>
+
+    <!-- Risk Matrix -->
+    <h3 class="section-title"><span class="dot"></span>9.1 风险全景图</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-risk-matrix" class="chart-container" style="height:420px"></div>
+      </div>
+    </div>
+
+    <!-- Risk Table -->
+    <h3 class="section-title"><span class="dot"></span>9.2 风险等级评估</h3>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>风险维度</th><th>风险描述</th><th>等级</th><th>触发条件</th></tr></thead>
+          <tbody>
+            <tr><td><strong>扩张失控</strong></td><td>单店模型未验证就大规模复制</td><td><span class="tag tag-high">高</span></td><td>Y1未盈亏平衡就开新店</td></tr>
+            <tr><td><strong>师资断档</strong></td><td>合格店长/优质教师无法到位</td><td><span class="tag tag-high">高</span></td><td>师资储备&lt;需求60%</td></tr>
+            <tr><td><strong>口碑崩塌</strong></td><td>服务质量下滑引发负面口碑</td><td><span class="tag tag-high">高</span></td><td>满意度&lt;4分或退费率&gt;15%</td></tr>
+            <tr><td><strong>同行举报</strong></td><td>被竞品或同行举报违规经营</td><td><span class="tag tag-high">高</span></td><td>宣传/教学涉嫌学科类</td></tr>
+            <tr><td><strong>资金链断裂</strong></td><td>扩张超出资金承受能力</td><td><span class="tag tag-mid">中</span></td><td>现金流&lt;3个月支出</td></tr>
+            <tr><td><strong>火花品牌风险</strong></td><td>母品牌负面影响子品牌</td><td><span class="tag tag-mid">中</span></td><td>母品牌重大负面事件</td></tr>
+            <tr><td><strong>续费空窗</strong></td><td>寒暑假课消后续费跟不上</td><td><span class="tag tag-mid">中</span></td><td>9月/3月在读骤降&gt;20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Anti-Report SOP (new) -->
+    <h3 class="section-title"><span class="dot"></span>同行举报防控SOP（新增重点）</h3>
+    <div class="callout callout-danger">
+      <strong>北京2023-2025年被查的教培机构，70%以上是同行举报。</strong>这是最现实的风险。
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <table class="data-table">
+          <thead><tr><th>类别</th><th style="color:var(--danger)">禁止</th><th style="color:var(--success)">合规替代</th></tr></thead>
+          <tbody>
+            <tr><td>对外宣传</td><td class="red">"提分""奥数""冲刺""应试"</td><td class="green">"思维提升""逻辑训练""能力培养"</td></tr>
+            <tr><td>课程名称</td><td class="red">"计算强化""应用题突破"</td><td class="green">"数感探索""思维闯关"</td></tr>
+            <tr><td>教室布置</td><td class="red">"XX学员提分30分"海报</td><td class="green">"XX学员获SASMO铜奖"成果展示</td></tr>
+            <tr><td>家长群</td><td class="red">校内考试成绩排名</td><td class="green">思维能力测评成长报告</td></tr>
+            <tr><td>课程内容</td><td class="red">直接使用校内教材原题</td><td class="green">基于校内知识点的思维拓展题</td></tr>
+            <tr><td>资质储备</td><td class="red">仅"数学培训"类</td><td class="green">同步储备"素质教育""科技创新"类</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Risk Response -->
+    <h3 class="section-title"><span class="dot"></span>9.3 核心风险应对策略</h3>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header"><h3>市场风险</h3><span class="badge badge-red">高</span></div>
+        <div class="card-body" style="font-size:14px">
+          <p><strong>竞品价格战：</strong>差异化竞争，不打价格战</p>
+          <p><strong>招生不达预期：</strong>渠道多元化，加大转介绍</p>
+          <p><strong>口碑下滑：</strong>提升教学质量，建立反馈机制</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>师资风险</h3><span class="badge badge-red">高</span></div>
+        <div class="card-body" style="font-size:14px">
+          <p><strong>待遇留人：</strong>薪酬行业前30%</p>
+          <p><strong>发展留人：</strong>教师&rarr;主管&rarr;合伙人</p>
+          <p><strong>储备机制：</strong>人才库10%冗余</p>
+          <p><strong>应急补位：</strong>3天内上岗</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>财务风险</h3><span class="badge badge-orange">中</span></div>
+        <div class="card-body" style="font-size:14px">
+          <p><strong>现金流紧张：</strong>预留6个月运营资金</p>
+          <p><strong>持续亏损：</strong>优化成本，提升人效</p>
+          <p><strong>退费集中：</strong>优化课程，合理退费政策</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>火花品牌关联风险（新增）</h3><span class="badge badge-orange">中</span></div>
+        <div class="card-body" style="font-size:14px">
+          <p><strong>前6个月：</strong>充分利用火花背书获取信任</p>
+          <p><strong>6-12个月：</strong>同步建设本地化成果信任状</p>
+          <p><strong>12个月后：</strong>品牌传播中火花占比降至30%以下</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert System -->
+    <h3 class="section-title"><span class="dot"></span>9.5 预警指标体系</h3>
+    <div class="card">
+      <div class="card-body">
+        <div id="chart-alert" class="chart-container" style="height:350px"></div>
+      </div>
+    </div>
+
+    <div class="page-nav" id="page-nav"></div>
+  </main>
+
+  <script src="js/echarts.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    // Risk matrix scatter
+    (() => {
+      const chart = initChart('chart-risk-matrix');
+      if(!chart) return;
+      chart.setOption({
+        grid: { left: 80, right: 40, top: 40, bottom: 60 },
+        xAxis: { type: 'value', name: '发生概率', min: 0, max: 100, nameLocation: 'center', nameGap: 35, nameTextStyle: { fontSize: 14, fontWeight: 600 } },
+        yAxis: { type: 'value', name: '影响程度', min: 0, max: 100, nameLocation: 'center', nameGap: 50, nameTextStyle: { fontSize: 14, fontWeight: 600 } },
+        series: [{
+          type: 'scatter', symbolSize: (val) => val[2] * 2,
+          label: { show: true, formatter: (p) => p.data[3], position: 'right', fontSize: 12, color: BRAND.deep },
+          data: [
+            [75, 90, 25, '扩张失控', BRAND.danger],
+            [60, 85, 22, '师资断档', BRAND.danger],
+            [50, 80, 20, '口碑崩塌', BRAND.danger],
+            [65, 70, 22, '同行举报', BRAND.danger],
+            [40, 75, 18, '资金链断裂', BRAND.orange],
+            [30, 60, 16, '火花品牌风险', BRAND.orange],
+            [45, 50, 16, '续费空窗', BRAND.orange],
+            [20, 40, 14, '政策收紧', BRAND.gold],
+            [15, 30, 12, '安全事故', BRAND.teal],
+          ],
+          itemStyle: { color: (p) => p.data[4] },
+        }],
+        visualMap: { show: false },
+      });
+    })();
+
+    // Alert gauges
+    (() => {
+      const chart = initChart('chart-alert');
+      if(!chart) return;
+      const gaugeOpt = (center, value, name, thresholds) => ({
+        type: 'gauge', center, radius: '38%',
+        min: 0, max: 100, startAngle: 200, endAngle: -20,
+        axisLine: { lineStyle: { width: 15, color: [[thresholds[0]/100, BRAND.danger], [thresholds[1]/100, BRAND.warning], [1, BRAND.success]] } },
+        pointer: { length: '55%', width: 4 },
+        axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
+        detail: { formatter: value + '%', fontSize: 20, fontWeight: 700, color: BRAND.deep, offsetCenter: [0, '65%'] },
+        title: { offsetCenter: [0, '85%'], fontSize: 13, color: '#5a6a7a' },
+        data: [{ value, name }]
+      });
+      chart.setOption({
+        series: [
+          gaugeOpt(['16%','50%'], 75, '续费率', [50, 65]),
+          gaugeOpt(['40%','50%'], 70, '满班率', [40, 60]),
+          gaugeOpt(['64%','50%'], 8, '退费率', [20, 12]),
+          gaugeOpt(['88%','50%'], 90, '出勤率', [70, 85]),
+        ]
+      });
+    })();
+  </script>
+</body>
+</html>
